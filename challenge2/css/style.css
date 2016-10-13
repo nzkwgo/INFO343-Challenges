@@ -9,6 +9,18 @@ header {
 
 h1, h2, h3 {
     margin-top: 0px;
+    margin-bottom: 0.5rem;
+    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+p {
+    line-height: 1.43;
+    margin-top: 0px;
+    margin-bottom: 1rem;
 }
 
 header p {
@@ -73,4 +85,11 @@ header p {
 
 .feature svg {
     height: 50px;
+}
+
+body {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+
 }
