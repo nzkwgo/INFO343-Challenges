@@ -74,13 +74,13 @@ header p {
     }
 }
 
-.features-section {
+.features-section, .testimonials-section {
     padding: 15px 0px;
     background-color: #F8F8F8;
 
 }
 
-.features-section h2, .uses-section h2 {
+.features-section h2, .uses-section h2, .testimonials-section h2 {
     text-align: center;
     font-variant: small-caps;
 }
@@ -116,4 +116,20 @@ header p {
 .use-words {
     margin: 10px;
 }
+
+.title {
+    color: #999999;
+    font-size: .80em;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    float: left;
+}
+
+.test-text {
+    padding-left: 100px;
+}
+
+
 
