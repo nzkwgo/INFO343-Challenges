@@ -1,0 +1,177 @@
+body {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+header {
+    height: 400px;
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 150px;
+}
+
+h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+p {
+    line-height: 1.43;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+header p {
+    width: 50%;
+}
+
+.get-yours-link {
+    display: inline-block;
+    background-color: #814236;
+    color: white;
+    padding: 4px;
+    border: 1px solid #391D18;
+    /*^^change this stuff later to what it's supposed to be ^^*/
+}
+
+.get-yours-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.get-yours-link-mobile {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    header {
+        background-image: linear-gradient(to bottom, #391D18, #814236);
+        padding-top: 25px;
+        padding-bottom: 25px;
+        height: auto;
+        color: white;
+    }
+
+    .get-yours-link {
+        display: none;
+    }
+
+    .get-yours-link-mobile {
+        display: block;
+        color: white;
+        float: right;
+    }
+
+    .get-yours-link-mobile:hover {
+        color: #DFDFDF;
+    }
+
+    header p {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .feat-text {
+        padding-left: 60px;
+        text-align: left;
+    }
+
+    svg {
+        float: left;
+    }
+
+}
+
+.features-section, .testimonials-section {
+    padding: 15px 0px;
+    background-color: #F8F8F8;
+
+}
+
+.features-section h2, .uses-section h2, .testimonials-section h2 {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.feature, .use {
+    height: 300px;
+    background-color: white;
+    border: 1px solid #DFDFDF;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.feature {
+    text-align: center;
+    padding: 10px;
+}
+
+.feature svg {
+    height: 50px;
+    fill: #814236;
+}
+
+.uses-section {
+    background-color: #EBEBEB;
+    padding: 15px 0px;
+}
+
+.use img {
+    height: 150px;
+    width: 100%;
+}
+
+.use-words {
+    margin: 10px;
+}
+
+.title {
+    color: #999999;
+    font-size: .80em;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    float: left;
+}
+
+.test-text {
+    padding-left: 100px;
+}
+
+footer {
+    background-color: #391D18;
+    color: #EEEEEE;
+}
+
+footer a, footer a:hover {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+.contact {
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        float: right;
+        padding: 5px;
+    }
+
+    #copyright {
+        display: inline;
+    }
+}
+
+
+
