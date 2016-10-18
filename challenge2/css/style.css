@@ -50,7 +50,7 @@ header p {
     display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     header {
         background-image: linear-gradient(to bottom, #391D18, #814236);
         padding-top: 25px;
@@ -80,22 +80,40 @@ header p {
 
 }
 
-.features-section h2 {
+.features-section h2, .uses-section h2 {
     text-align: center;
     font-variant: small-caps;
 }
 
-.feature {
+.feature, .use {
     height: 300px;
     background-color: white;
-    text-align: center;
     border: 1px solid #DFDFDF;
     border-radius: 3px;
-    padding: 10px;
     margin-bottom: 10px;
+}
+
+.feature {
+    text-align: center;
+    padding: 10px;
 }
 
 .feature svg {
     height: 50px;
     fill: #814236;
 }
+
+.uses-section {
+    background-color: #EBEBEB;
+    padding: 15px 0px;
+}
+
+.use img {
+    height: 150px;
+    width: 100%;
+}
+
+.use-words {
+    margin: 10px;
+}
+
