@@ -44,6 +44,7 @@ header p {
 
 .get-yours-link:hover {
     color: white;
+    text-decoration: none;
 }
 
 .get-yours-link-mobile {
@@ -69,9 +70,25 @@ header p {
         float: right;
     }
 
+    .get-yours-link-mobile:hover {
+        color: #DFDFDF;
+    }
+
     header p {
         width: auto;
     }
+}
+
+@media (max-width: 768px) {
+    .feat-text {
+        padding-left: 60px;
+        text-align: left;
+    }
+
+    svg {
+        float: left;
+    }
+
 }
 
 .features-section, .testimonials-section {
@@ -129,6 +146,31 @@ header p {
 
 .test-text {
     padding-left: 100px;
+}
+
+footer {
+    background-color: #391D18;
+    color: #EEEEEE;
+}
+
+footer a, footer a:hover {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+.contact {
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        float: right;
+        padding: 5px;
+    }
+
+    #copyright {
+        display: inline;
+    }
 }
 
 
