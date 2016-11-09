@@ -12,6 +12,9 @@ var loginPassword = document.getElementById("login-password");
 var loginButton = document.getElementById("login-button");
 var loginError = document.getElementById("login-error");
 
+//boolean to check if user information is being updated
+var updating = false;
+
 // When the user logs in, send the email and password to firebase.
 // Firebase will determine whether or not the user logged in correctly.
 loginForm.addEventListener("submit", function (e) {
@@ -67,12 +70,16 @@ signupForm.addEventListener("submit", function (e) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function (user) {
             var user = firebase.auth().currentUser;
+            updating = true;                                                      
 
             // Send verification email
-            user.sendEmailVerification().then(function() {
+            user.sendEmailVerification()
+            .then(function() {
                 // Email sent.
+                console.log("email sent");
             }, function(error) {
                 // An error happened
+                console.log("error sending");
             });
 
             // Update their display name and profile picture
@@ -80,14 +87,18 @@ signupForm.addEventListener("submit", function (e) {
             user.updateProfile({
                 displayName: displayName,
                 photoURL: "https://www.gravatar.com/avatar/" + md5(email),
-            }).then(function() {
+            })
+            .then(function() {
                 // Update sucessful
+                console.log("Update successful");
+                console.log(user.photoURL)
             }, function(error) {
                 // An error happened
+                console.log("Error in update");
             });
 
             // Redirect to chat page (dont do this until the other two actions have completed succesfully)
-            // window.location.href = "chat.html";
+            window.location.href = "chat.html";
         })
         .catch(function (error) {
             signupError.textContent = error.message;
@@ -103,8 +114,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   // the user is logged in.
   if (user) {
       console.log("signed in");
-
-      window.location.href = "chat.html";
+      if (!updating) {
+        window.location.href = "chat.html";
+      }
   } else {
     // Otherwise, they have not signed in.
     console.log("signed out");
