@@ -25,15 +25,12 @@ loginForm.addEventListener("submit", function (e) {
     var email = loginEmail.value;
     var password = loginPassword.value;
 
-    // console.log(email);
-    // console.log(password);
-
     // If the login was successful, the .then callback will be called.
     // Otherwise, the .catch callback will be called,
     // with an error object containing the error message.
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function() {
-      console.log("Logged in successfully!");
+        //successful
     })
     .catch(function(error) {
       loginError.textContent = error.message;
@@ -58,11 +55,6 @@ signupForm.addEventListener("submit", function (e) {
     var password = signupPassword.value;
     var passwordConfirm = signupPasswordConfirm.value;
 
-    console.log(displayName);
-    console.log(email);
-    console.log(password);
-    console.log(passwordConfirm);
-
     if (password !== passwordConfirm) {
         signupError.textContent = 'Passwords do not match.';
         signupError.classList.add('active');
@@ -76,10 +68,8 @@ signupForm.addEventListener("submit", function (e) {
             user.sendEmailVerification()
             .then(function() {
                 // Email sent.
-                console.log("email sent");
             }, function(error) {
                 // An error happened
-                console.log("error sending");
             });
 
             // Update their display name and profile picture
@@ -90,11 +80,8 @@ signupForm.addEventListener("submit", function (e) {
             })
             .then(function() {
                 // Update sucessful
-                console.log("Update successful");
-                console.log(user.photoURL)
             }, function(error) {
                 // An error happened
-                console.log("Error in update");
             });
 
             // Redirect to chat page (dont do this until the other two actions have completed succesfully)
@@ -113,12 +100,10 @@ firebase.auth().onAuthStateChanged(function(user) {
   // If the user parameter is truthy,
   // the user is logged in.
   if (user) {
-      console.log("signed in");
       if (!updating) {
         window.location.href = "chat.html";
       }
   } else {
     // Otherwise, they have not signed in.
-    console.log("signed out");
   }
 });

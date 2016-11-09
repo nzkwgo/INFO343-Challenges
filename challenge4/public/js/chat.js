@@ -71,7 +71,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                     if (confirmation) {
                         var database = firebase.database();
                         var ref = database.ref('channels/general/' + id);
-                        console.log(ref);
                         ref.remove();
                     }
                 }
