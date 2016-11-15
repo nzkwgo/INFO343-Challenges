@@ -14,7 +14,6 @@ class App extends React.Component {
             <div>
                 <h1 id="title">Whether the Weather</h1>
                 <WeatherSearch/>
-
             </div>
         );
     }

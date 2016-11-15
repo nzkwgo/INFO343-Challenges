@@ -7,7 +7,13 @@ class WeatherCurrent extends React.Component {
                 <p id="temp">{this.props.temp}&deg;</p>
                 <p id="shortDesc">{this.props.shortDesc}</p>
                 <p id="longDesc">({this.props.longDesc})</p>
+
+                <button onClick={(e) => this.save(e)}>Save</button>
             </div>
         );
+    }
+
+    save(e) {
+        this.props.onSave(this.props.query);
     }
 }
