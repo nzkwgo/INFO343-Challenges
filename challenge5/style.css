@@ -1,0 +1,8 @@
+#search-error {
+    display: none;
+}
+
+#search-error.error {
+    display: block;
+    background-color: rgba(217, 89, 89, 0.5);
+}

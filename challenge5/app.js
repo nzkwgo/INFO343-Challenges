@@ -11,11 +11,14 @@ class App extends React.Component {
 
     render() {
         return (
-            <h1 id="title">Whether the Weather</h1>
+            <div>
+                <h1 id="title">Whether the Weather</h1>
+                <WeatherSearch/>
+            </div>
         );
     }
 }
 
-//var app = document.getElementById('app');
+var app = document.getElementById('app');
 
-//ReactDOM.render(<App />, app);
+ReactDOM.render(<App />, app);
