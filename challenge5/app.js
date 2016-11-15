@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1 id="title">Whether the Weather</h1>
+                <h1>Whether the Weather</h1>
                 <WeatherSearch/>
             </div>
         );
