@@ -19,6 +19,17 @@ class WeatherSearch extends React.Component {
                     <button type="submit">Search</button>
                 </form>
                 <div id="search-error" className={this.state.error} role="alert">Error: Location Not Found</div>
+                {
+                    this.state.name ? (
+                        <WeatherCurrent
+                            name={this.state.name}
+                            shortDesc={this.state.shortDesc}
+                            longDesc={this.state.longDesc}
+                            icon={this.state.icon}
+                            temp={this.state.temp}
+                        />
+                    ) : null
+                }
             </div>
         );
     }
