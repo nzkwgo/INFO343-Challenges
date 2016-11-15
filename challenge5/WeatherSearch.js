@@ -5,10 +5,18 @@ class WeatherSearch extends React.Component {
         this.state = {
             saved: []
         };
+
+        if(localStorage.getItem('savedLocations')) {
+            var savedLocs = JSON.parse(localStorage.getItem('savedLocations'));
+
+            this.searchLocation(savedLocs[0]);
+            this.state = {
+                saved: savedLocs
+            };
+        }
     }
 
     render() {
-        
         return (
             <div>
                 <form onSubmit={(e) => this.onSearch(e)}>
@@ -20,6 +28,7 @@ class WeatherSearch extends React.Component {
                     <button type="submit">Search</button>
                 </form>
                 <div id="search-error" className={this.state.error} role="alert">Error: Location Not Found</div>
+
                 {
                     this.state.name ? (
                         <WeatherCurrent
@@ -83,12 +92,14 @@ class WeatherSearch extends React.Component {
 
     saveLocation(query) {
         var saved = this.state.saved;
-        saved.push(query);
-        this.setState({
-            saved: saved
-        });
+        if (saved.indexOf(query) < 0) {
+            saved.push(query);
+            this.setState({
+                saved: saved
+            });
 
-        var savedJSON = JSON.stringify(saved);
-        localStorage.setItem('savedLocations', savedJSON);
+            var savedJSON = JSON.stringify(saved);
+            localStorage.setItem('savedLocations', savedJSON);
+        }
     }
 }
