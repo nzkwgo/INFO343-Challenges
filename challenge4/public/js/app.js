@@ -1,7 +1,6 @@
 /*
  * This file should call firebase.initializeApp({ ... }) with your app credentials.
  */
-
 // Initialize Firebase
   var config = {
     apiKey: "AIzaSyDnXSLionFgMBm8VDtuodub72Xg9ZHvaxE",

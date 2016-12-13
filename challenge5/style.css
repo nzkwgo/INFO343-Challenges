@@ -1,0 +1,62 @@
+/*
+Style inspired by this beautiful website:
+http://www.mamarocks.com/whether_the_weather.htm
+*/
+#search-error {
+    display: none;
+}
+
+#search-error.error {
+    display: block;
+    background-color: rgba(217, 89, 89, 0.5);
+    color: white;
+}
+
+body {
+    font-family: 'Comic Sans MS', "Comic Sans", cursive;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+h1 {
+    height: 100%;
+    color: red;
+}
+h2 {
+    color: orange;
+}
+
+#temp {
+    color: yellow;
+}
+
+#shortDesc {
+    color: green;
+    display: inline;
+}
+
+#longDesc {
+    color: lightskyblue;
+    margin-left: 5%;
+    display: inline;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+    margin: 1%;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    height: 200px;
+}
